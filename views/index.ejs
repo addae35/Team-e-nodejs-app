@@ -1,0 +1,19 @@
+<%- include("partials/header.ejs") %>
+
+  <% if (locals.adjective && locals.noun) { %>
+    <h1>
+      <%= adjective %>
+        <%= noun %>
+    </h1>
+    <% } else { %>
+      <h1><em>Team E welcomes You all Today 🤟</em></h1>
+      <% } %>
+
+
+
+        <form action="/submit" method="POST">
+          <input type="submit" value="Guess my Name">
+        </form>
+
+
+        <%- include("partials/footer.ejs") %>
